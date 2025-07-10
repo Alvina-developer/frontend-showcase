@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/app.js"></script>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <h1 class="text-center text-primary mt-5"> Login Form</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 m-auto mt-5">
+                <input type="text" placeholder="Username" class="form-control mb-4" id="uname">
+                <div class="input-group mb-4">
+                    <input type="password" placeholder="password" class="form-control" id="pswd">
+                    <span class="input-group-icon">
+                        <button class="btn " onclick="showpass()">
+                        <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </span>
+                </div>
+                <button class="btn btn-primary w-100" onclick="abc()"> Login</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function abc(){
+            var name = document.getElementById("uname").value;
+            var psw = document.getElementById("pswd").value;
+    
+            if(name=="admin" && psw =="123"){
+                location.href="index.html";
+            }
+            else{
+                alert("incorrect username or password")
+            }
+        }
+    
+        function showpass(){
+            var a = document.getElementById("pswd");
+            
+            if( a.type=="password"){
+                a.type="text";
+            }
+            else{
+                a.type="password";
+            }
+        }
+    </script>
+    
+    
+
+</body>
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
